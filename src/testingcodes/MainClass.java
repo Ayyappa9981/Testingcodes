@@ -150,7 +150,7 @@ public class MainClass
 */
 //Heirarechal inheritance
 
-
+/*
 class Student1
 {
 	void msg1()
@@ -181,9 +181,70 @@ public class MainClass
 		myObj.msg3();
 	}
 }
+*/
 
 
+//Polymorphism 
 
+//Method overloading -----Compile time 
+/*
+class Sum
+{
+	int add(int x,int y)
+	{
+		return x+y;
+	}
+	int add(int x,int y,int z)
+	{
+		return x+y+z;
+	}
+	float add(float x, float y)
+	{
+		return x+y;
+	}
+}
+class MainClass
+{
+	public static void main(String[] args) {
+//		Sum s =new Sum();
+//		int res1,res2;
+//		float res3;
+//		res1=s.add(10,40);
+//		res2=s.add(10,20,30);
+//		res3=s.add(10.5f,10.5f);
+//		System.out.println(res1);
+//		System.out.println(res2);
+//		System.out.println(res3);
+		System.out.println(Sum.add(10,20));
+		System.out.println(Sum.add(10,20,30));
+		System.out.println(Sum.add(10.7f,20.5f));
+	}
+}
+*/
+
+//method over riding --Run time
+
+class Student1
+{
+	void msg()
+	{
+		System.out.println("messaging......");
+	}
+}
+class Student2 extends Student1
+{
+	void msg()
+	{
+		System.out.println("chatting............");
+	}
+}
+class MainClass
+{
+	public static void main(String[] args) {
+		Student2 myObj =new Student2();
+		myObj.msg();
+	}
+}
 
 
 
