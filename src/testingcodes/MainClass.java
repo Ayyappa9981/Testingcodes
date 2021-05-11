@@ -21,6 +21,7 @@ public class MainClass {
 
 //Initalisation in the main method
 
+/*
 class Student 
 {
 	int rollno;
@@ -49,7 +50,7 @@ public class MainClass{
 	}
 	
 }
-
+*/
 
 //Initalisation through Constructor
 
@@ -82,3 +83,117 @@ public class MainClass{
 	
 }
 */
+
+//Inheritance
+
+//Single inheritance
+/*
+class Student1
+{
+	void msg1()
+	{
+		System.out.println("Student 1 is Shouting!!!");
+	}
+}
+class Student2 extends Student1
+{
+	void msg2()
+	{
+		System.out.println("Student 2 is Shouting!!!");
+	}
+}
+
+public class MainClass
+{
+	public static void main(String[] args) {
+		Student2 myObj =new Student2();
+		myObj.msg2();
+		myObj.msg1();
+	}
+}
+*/
+
+//multilevel inheritance
+
+/*
+class Student1
+{
+	void msg1()
+	{
+		System.out.println("Student 1 is Shouting!!!");
+	}
+}
+class Student2 extends Student1
+{
+	void msg2()
+	{
+		System.out.println("Student 2 is Shouting!!!");
+	}
+}
+
+class Student3 extends Student2
+{
+	void msg3()
+	{
+		System.out.println("Student 3 is Shouting!!!");
+	}
+}
+public class MainClass
+{
+	public static void main(String[] args) {
+		Student3 myObj =new Student3();
+		myObj.msg1();
+		myObj.msg2();
+		myObj.msg3();
+	}
+}
+*/
+//Heirarechal inheritance
+
+
+class Student1
+{
+	void msg1()
+	{
+		System.out.println("Student 1 is Shouting!!!");
+	}
+}
+class Student2 extends Student1
+{
+	void msg2()
+	{
+		System.out.println("Student 2 is Shouting!!!");
+	}
+}
+
+class Student3 extends Student1
+{
+	void msg3()
+	{
+		System.out.println("Student 3 is Shouting!!!");
+	}
+}
+public class MainClass
+{
+	public static void main(String[] args) {
+		Student3 myObj =new Student3();
+		myObj.msg1();
+		myObj.msg3();
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
