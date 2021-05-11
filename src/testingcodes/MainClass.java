@@ -315,7 +315,7 @@ class MainClass {
 }
 */
 
-
+/*
 interface Drawable
 {
 	void draw();
@@ -338,4 +338,42 @@ class MainClass{
 		d.draw();
 	}
 }
+*/
 
+//Encapsulation
+
+class Student{
+	private int rollno;
+	private String name;
+	private String gender;
+	
+	public int getRollno() {
+		return rollno;
+	}
+	public void setRollno(int rollno) {
+		this.rollno = rollno;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getGender() {
+		return gender;
+	}
+	public void setGender(String gender) {
+		this.gender = gender;
+	}		
+}
+class MainClass{
+	public static void main(String[] args) {
+		Student s1=new Student();
+		s1.setRollno(12345);
+		s1.setName("Ayyappa");
+		s1.setGender("Male");
+		System.out.println("Rollno:"+s1.getRollno());
+		System.out.println("Name:"+s1.getName());
+		System.out.println("Gender:"+s1.getGender());
+	}
+}
