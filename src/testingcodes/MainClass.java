@@ -499,7 +499,7 @@ class MainClass {
 */
 
 //Super is used to refer parent class Constructor
-
+/*
 class Student1 {
 	int id;
 	String name;
@@ -527,6 +527,114 @@ class MainClass {
 		System.out.printf(" ID:%s\n Name:%s\n Gender:%s\n Mobileno:%s\n Father name:%s\n Mother name:%s\n",s.id,s.name,s.gender,s.mblno,s.fname,s.mname);
 	}
 }
+*/
+
+//Static variable
+/*
+class Student {
+	int rollno;
+	String name;
+	String gender;
+	static float cgpa=9.5f;
+	void display() {
+		System.out.println("Rollno:"+rollno);
+		System.out.println("Name:"+name);
+		System.out.println("Gender:"+gender);
+		System.out.println("CGPA:"+cgpa);
+	}
+}
+class MainClass {
+	public static void main(String[] args) {
+		Student s = new Student();
+		s.rollno=123;
+		s.name="Ayyappa";
+		s.gender="Male";
+		s.display();
+		Student s1 = new Student();
+		s1.rollno=456;
+		s1.name="Kumar";
+		s1.gender="Male";
+		s1.display();
+	}
+}
+*/
+
+//Static method
+
+
+/*
+class Student {
+	int rollno;
+	String name;
+	String gender;
+	static float cgpa=9.5f;
+	static void change() {
+		cgpa=8.5f;
+	}
+	void display() {
+		System.out.println(name+" "+rollno+" "+gender+" "+cgpa);
+	}
+}
+class MainClass {
+	public static void main(String[] args) {
+		Student.change();
+		Student s = new Student();
+		s.rollno=123;
+		s.name="Ayyappa";
+		s.gender="Male";
+		
+		s.display();
+		Student s1 = new Student();
+		s1.rollno=456;
+		s1.name="Kumar";
+		s1.gender="Male";
+		s1.display();
+	}
+}
+*/
+//final variable
+
+/*
+class MainClass {
+	public static void main(String[] args) {
+	final int a =10;
+	int num=5,i;
+	for(i=1;i<=num;i++) {
+		System.out.println("i value is:"+i);
+		System.out.println("j value is:"+(a+i));
+	}
+}
+}
+*/
+
+//final method
+
+class Student {
+	int num=10;
+	final void display() {
+		System.out.println(num);
+	}
+}
+class Student1 extends Student {
+	int num2=20;
+	void display() {
+		System.out.println(num2);
+	}
+}
+class MainClass {
+	public static void main(String[] args) {
+		Student1 s = new Student1();
+		s.display();
+		
+	}
+}
+
+
+
+
+
+
+
 
 
 
