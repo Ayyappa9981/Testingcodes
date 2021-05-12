@@ -292,8 +292,6 @@ public class MainClass {
 }
 */
 
-
-
 //Interface
 /*
 interface Car {
@@ -341,7 +339,7 @@ class MainClass{
 */
 
 //Encapsulation
-
+/*
 class Student{
 	private int rollno;
 	private String name;
@@ -377,3 +375,189 @@ class MainClass{
 		System.out.println("Gender:"+s1.getGender());
 	}
 }
+*/
+
+//This Keyword
+
+//This is used to refer current class instance variable.
+/*
+class Student {
+	int rollno;
+	String name;
+	String gender;
+
+	public Student(int rollno, String name, String gender) {
+		this.rollno = rollno;
+		this.name = name;
+		this.gender = gender;
+	}
+}
+class MainClass{
+	public static void main(String[] args) {
+		Student s1=new Student(123,"Ayyappa","Male");
+		System.out.printf("Rollno:%s\nName:%s\nGender:%s",s1.rollno,s1.name,s1.gender);
+	}
+}
+*/
+
+//This is used to refer current class method
+/*
+class Message {
+	void msg1() {
+		System.out.println("Messaging");
+	}
+	void msg2() {
+		this.msg1();
+		System.out.println("Chatting");
+	}
+}
+class MainClass {
+	public static void main(String[] args) {
+		Message m = new Message();
+		m.msg2();
+	}
+}
+*/
+
+// This is used to refer current class constructor
+/*
+class Student {
+	int rollno;
+	String name;
+	String gender;
+	float cgpa;
+
+	Student(int rollno, String name, String gender) {
+		this.rollno = rollno;
+		this.name = name;
+		this.gender = gender;
+	}
+
+	Student(int rollno, String name, String gender, float cgpa) {
+		this(rollno, name, gender);
+		this.cgpa = cgpa;
+	}
+	void display() {
+		System.out.printf("Rollno:%s\nName:%s\nGender:%s\nCGPA:%s\n",rollno,name,gender,cgpa);
+	}
+}
+class MainClass {
+	public static void main(String[] args) {
+		Student s =new Student(123,"Ayyappa","Male",9.5f);
+		Student s1 =new Student(123,"Kumar","Male",8.5f);
+		s.display();
+		s1.display();
+	}
+}
+*/
+
+//Super Keyword
+
+//Super is used to refer immediate parent class variable
+
+/*
+class Student1 {
+	int marks1=100;
+}
+class Student2 extends Student1 {
+	int marks2=101;
+	void display() {
+		System.out.println("Child class:"+marks2);
+		System.out.println("parent class:"+super.marks1);
+	}
+}
+class MainClass {
+	public static void main(String[] args) {
+		Student2 s = new Student2();
+		s.display();
+		
+	}
+}
+*/
+
+//Super is used to refer immediate parent class method
+
+/*
+class Student1 {
+	void msg1() {
+		System.out.println("Messaging 1......");
+	}
+}
+class Student2 extends Student1 {
+	void msg2() {
+		super.msg1();
+		System.out.println("Messaging 2..........");
+	}
+}
+class MainClass {
+	public static void main(String[] args) {
+		Student2 s = new Student2();
+		s.msg2();
+	}
+	
+}
+*/
+
+//Super is used to refer parent class Constructor
+
+class Student1 {
+	int id;
+	String name;
+	String gender;
+	Student1(int id,String name,String gender) {
+		this.id=id;
+		this.name=name;
+		this.gender=gender;
+	}
+}
+class Student2 extends Student1 {
+	long mblno;
+	String fname;
+	String mname;
+	Student2(int id,String name,String gender,long mblno,String fname,String mname) {
+		super(id,name,gender);
+		this.mblno=mblno;
+		this.fname=fname;
+		this.mname=mname;
+	}
+}
+class MainClass {
+	public static void main(String[] args) {
+		Student2 s = new Student2(123,"Ayyappa","Male",9502140845L,"VenkataRao","Ravanamma");
+		System.out.printf(" ID:%s\n Name:%s\n Gender:%s\n Mobileno:%s\n Father name:%s\n Mother name:%s\n",s.id,s.name,s.gender,s.mblno,s.fname,s.mname);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
