@@ -2,7 +2,7 @@ package testingcodes;
 
 //Creating a Class and an Object
 
-//Intialisation to the variables
+//Initalisation to the variables
 /*
 class Student {
 	int rollno = 123;
@@ -19,7 +19,7 @@ public class MainClass {
 }
 */
 
-//Initalisation in the main method
+//Initalisation with the method
 
 /*
 class Student 
@@ -84,7 +84,7 @@ public class MainClass{
 }
 */
 
-//Inheritance
+//Inheritance:-Single, Mutlilevel, Hierarichal
 
 //Single inheritance
 /*
@@ -148,7 +148,7 @@ public class MainClass
 	}
 }
 */
-//Heirarechal inheritance
+//Hierarechal inheritance
 
 /*
 class Student1
@@ -183,8 +183,7 @@ public class MainClass
 }
 */
 
-
-//Polymorphism 
+//Polymorphism:-Method overloading,Method Overriding
 
 //Method overloading -----Compile time 
 /*
@@ -223,7 +222,7 @@ class MainClass
 */
 
 //method over riding --Run time
-
+/*
 class Student1
 {
 	void msg()
@@ -245,16 +244,98 @@ class MainClass
 		myObj.msg();
 	}
 }
+*/
+
+//Abstraction:-Abstract class, Interface
+
+//Abstract class
+/*
+abstract class Bike {
+	abstract void run();
+}
+
+class Honda extends Bike {
+	public void run() {
+		System.out.println("Running Superb!!!!!!");
+	}
+}
+
+public class MainClass {
+	public static void main(String[] args) {
+		Bike h = new Honda();
+		h.run();
+	}
+}
+*/
+/*
+abstract class Drawing {
+	abstract void draw();
+}
+
+class Rectangle extends Drawing {
+	public void draw() {
+		System.out.println("Drawing a rectangle!!!");
+	}
+}
+
+class Triangle extends Drawing {
+	public void draw() {
+		System.out.println("Drawing a Triangle");
+	}
+}
+
+public class MainClass {
+	public static void main(String[] args) {
+		Drawing d = new Triangle();
+		d.draw();
+	}
+}
+*/
 
 
 
+//Interface
+/*
+interface Car {
+	void run();
+}
+
+class Santro implements Car {
+	public void run() {
+		System.out.println("Car is running safely");
+	}
+}
+
+class MainClass {
+	public static void main(String[] args) {
+		Car s = new Santro();
+		s.run();
+
+	}
+}
+*/
 
 
-
-
-
-
-
-
-
+interface Drawable
+{
+	void draw();
+}
+class Rectangle implements Drawable
+{
+	public void draw() {
+		System.out.println("Drawing a Rectangle");
+	}
+}
+class Triangle implements Drawable
+{
+	public void draw() {
+		System.out.println("Drawing a Triangle");
+	}
+}
+class MainClass{
+	public static void main(String[] args) {
+		Drawable d=new Triangle();
+		d.draw();
+	}
+}
 
