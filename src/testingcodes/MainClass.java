@@ -2,7 +2,7 @@ package testingcodes;
 
 //Creating a Class and an Object
 
-//Intialisation to the variables
+//Initalisation to the variables
 /*
 class Student {
 	int rollno = 123;
@@ -19,7 +19,7 @@ public class MainClass {
 }
 */
 
-//Initalisation in the main method
+//Initalisation with the method
 
 /*
 class Student 
@@ -84,7 +84,7 @@ public class MainClass{
 }
 */
 
-//Inheritance
+//Inheritance:-Single, Mutlilevel, Hierarichal
 
 //Single inheritance
 /*
@@ -148,9 +148,9 @@ public class MainClass
 	}
 }
 */
-//Heirarechal inheritance
+//Hierarechal inheritance
 
-
+/*
 class Student1
 {
 	void msg1()
@@ -181,19 +181,161 @@ public class MainClass
 		myObj.msg3();
 	}
 }
+*/
+
+//Polymorphism:-Method overloading,Method Overriding
+
+//Method overloading -----Compile time 
+/*
+class Sum
+{
+	int add(int x,int y)
+	{
+		return x+y;
+	}
+	int add(int x,int y,int z)
+	{
+		return x+y+z;
+	}
+	float add(float x, float y)
+	{
+		return x+y;
+	}
+}
+class MainClass
+{
+	public static void main(String[] args) {
+//		Sum s =new Sum();
+//		int res1,res2;
+//		float res3;
+//		res1=s.add(10,40);
+//		res2=s.add(10,20,30);
+//		res3=s.add(10.5f,10.5f);
+//		System.out.println(res1);
+//		System.out.println(res2);
+//		System.out.println(res3);
+		System.out.println(Sum.add(10,20));
+		System.out.println(Sum.add(10,20,30));
+		System.out.println(Sum.add(10.7f,20.5f));
+	}
+}
+*/
+
+//method over riding --Run time
+/*
+class Student1
+{
+	void msg()
+	{
+		System.out.println("messaging......");
+	}
+}
+class Student2 extends Student1
+{
+	void msg()
+	{
+		System.out.println("chatting............");
+	}
+}
+class MainClass
+{
+	public static void main(String[] args) {
+		Student2 myObj =new Student2();
+		myObj.msg();
+	}
+}
+*/
+
+//Abstraction:-Abstract class, Interface
+
+//Abstract class
+/*
+abstract class Bike {
+	abstract void run();
+}
+
+class Honda extends Bike {
+	public void run() {
+		System.out.println("Running Superb!!!!!!");
+	}
+}
+
+public class MainClass {
+	public static void main(String[] args) {
+		Bike h = new Honda();
+		h.run();
+	}
+}
+*/
+/*
+abstract class Drawing {
+	abstract void draw();
+}
+
+class Rectangle extends Drawing {
+	public void draw() {
+		System.out.println("Drawing a rectangle!!!");
+	}
+}
+
+class Triangle extends Drawing {
+	public void draw() {
+		System.out.println("Drawing a Triangle");
+	}
+}
+
+public class MainClass {
+	public static void main(String[] args) {
+		Drawing d = new Triangle();
+		d.draw();
+	}
+}
+*/
 
 
 
+//Interface
+/*
+interface Car {
+	void run();
+}
+
+class Santro implements Car {
+	public void run() {
+		System.out.println("Car is running safely");
+	}
+}
+
+class MainClass {
+	public static void main(String[] args) {
+		Car s = new Santro();
+		s.run();
+
+	}
+}
+*/
 
 
-
-
-
-
-
-
-
-
-
-
+interface Drawable
+{
+	void draw();
+}
+class Rectangle implements Drawable
+{
+	public void draw() {
+		System.out.println("Drawing a Rectangle");
+	}
+}
+class Triangle implements Drawable
+{
+	public void draw() {
+		System.out.println("Drawing a Triangle");
+	}
+}
+class MainClass{
+	public static void main(String[] args) {
+		Drawable d=new Triangle();
+		d.draw();
+	}
+}
 
